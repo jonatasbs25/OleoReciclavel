@@ -5,13 +5,19 @@ const formatarZeros = (n) => {
 
 //? mostrando horário do sistema
 const horaFormatada = setInterval(() => {
-    let hora, mins, secs;
     const horaSistema = new Date();
+    let semana, meses, diaSemana, dia, mes, ano, hora, mins, secs;
+    semana = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"];
+    meses = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
 
+    diaSemana = horaSistema.getDay();
+    dia = formatarZeros(horaSistema.getDate());
+    mes = horaSistema.getMonth();
+    ano = horaSistema.getFullYear();
     hora = formatarZeros(horaSistema.getHours());
     mins = formatarZeros(horaSistema.getMinutes());
     secs = formatarZeros(horaSistema.getSeconds());
 
-    document.getElementById("hora").innerHTML = hora + ":" + mins + ":" + secs;
+    document.getElementById("data-hora").innerHTML = semana[diaSemana] + ", " + dia + " de " + meses[mes] + " de " + ano + " " + hora + ":" + mins + ":" + secs;
 }, 1000);
 
