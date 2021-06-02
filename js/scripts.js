@@ -18,11 +18,11 @@ const horaFormatada = setInterval(() => {
     mins = formatarZeros(horaSistema.getMinutes());
     secs = formatarZeros(horaSistema.getSeconds());
 
-    document.getElementById("data-hora").innerHTML = `Av. Tralala - 300 - SP/Osasco | ${semana[diaSemana]}, ${dia} de ${meses[mes]} de ${ano} | ${hora}:${mins}:${secs}`;
+    document.getElementById("data-hora").innerHTML = `${semana[diaSemana]}, ${dia} de ${meses[mes]} de ${ano} | ${hora}:${mins}:${secs}`;
 }, 1);
 
 //? voltar ao topo
-const btnTopo = document.querySelector(".btn-topo");
+const btnTopo = document.querySelector("#btn-topo");
 btnTopo.addEventListener("click", () => {
     window.scrollTo({
         top: 0,
@@ -30,14 +30,25 @@ btnTopo.addEventListener("click", () => {
     }); 
 });
 
-//? mostrando ou ocultando o botão
+//? mostrando ou ocultando o botão de voltar ao topo
 function exibirBotao() {
     if(window.scrollY === 0){
         btnTopo.style.display = "none";
     }
     else{
         btnTopo.style.display = "block";
-        btnTopo.style.transition = ".8s";
     }
 }
-setInterval(exibirBotao, 1000);
+window.addEventListener("scroll", exibirBotao);
+
+//? menu de navegação fixo
+
+//? links de navegação ativos
+const link = document.querySelector(".menu-nav li");
+link.addEventListener("click", linkAtivo)
+
+function linkAtivo(){
+    if(link === onclick){
+        link.style.bgColor = red;
+    }
+}

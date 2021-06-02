@@ -5,44 +5,58 @@
 html, body{
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /*font-family: Arial, Helvetica, sans-serif;*/
     scroll-behavior: smooth;
 }
 /*? Div-Info */
 #info{
-    background-color: aquamarine;
+    background-color: #185510;
     display: flex;
-    justify-content: flex-end;
-    padding-right: 25px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
 }
 
 #info p{
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
     font-weight: bold;
+    font-size: 12pt;
 }
 /*? Menu */
-.menu{
+.menu-header{
     display: block;
 }
 
 .menu-principal{
     max-width: 100%;
-    background-color: #df0;
-    margin: 0;
+    margin: 0 auto;
     padding: 20px;
+    background-color: #41901C;
+}
+
+/*.menu-principal{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-}
+}*/
+
 .menu-nav{
+    max-width: 100%;
     display: block;
+    background-color: #87D936;
 }
 
 .menu-nav ul{
     margin: 0;
     padding: 0;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     list-style: none;
 }
 
@@ -52,17 +66,57 @@ html, body{
 }
 
 .menu-nav a{
+    font-size: 1.4rem;
     text-decoration: none;
+    color: white;
+}
+
+.menu-nav li:hover{
+    background-color: #185510;
+    transition: 3s;
+}
+
+.menu-nav a:visited{
+    background-color: #185510;
 }
 
 /*? Conteúdo Inicial */
 .conteudo-principal.inicio{
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 0 5rem 0 5rem;
+    padding: 60px 10px;
+}
+
+.conteudo-principal.inicio h1{
+    font-size: 2.5rem;
+}
+
+.conteudo-principal.inicio .projeto h1::before{
+    content: "";
+    border-left: 7px solid #185510;
+    margin-right: 10px;
+}
+
+.conteudo-principal.inicio .beneficios h1::before{
+    content: "";
+    border-left: 7px solid #41901C;
+    margin-right: 10px;
+}
+
+.conteudo-principal.inicio .equipe h1::before{
+    content: "";
+    border-left: 7px solid #87D936;
+    margin-right: 10px;
+}
+
+.conteudo-principal.inicio .parcerias h1::before{
+    content: "";
+    border-left: 7px solid #D9B855;
+    margin-right: 10px;
 }
 
 .conteudo-principal.inicio .projeto, .conteudo-principal.inicio .beneficios, .conteudo-principal.inicio .equipe{
-    border-bottom: 1px solid #000;
+    border-bottom: 2.5px solid #F2E7AE;
 }
 
 .equipe .card-container{
@@ -76,11 +130,28 @@ html, body{
 .equipe .card-participante{
     text-align: center;
     border: 1px solid #000;
+    border-radius: 15px;
 }
 
 .equipe .card-participante img{
+    border-radius: 15px 15px 0 0;
     max-width: 100%;
     height: 150px;
+    border-bottom: 1px solid #000;
+}
+
+/*? Conteúdo Inicial - Seção de Projeto */
+
+
+/*? Conteúdo Inicial - Seção de Parcerias */
+.parceiros{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+figure.fatec-osasco, figure.cps{
+    height: 50px;
 }
 
 /*? Conteúdo Ciclo do Óleo */
@@ -92,43 +163,43 @@ html, body{
 /*? Footer */
 footer{
     display: flex;
-    background-color: #df0;
+    background-color: #87D936;
     height: 100px;
     align-items: center;
 }
 
 footer p{
+    font-size: 1.4rem;
     flex: 1;
     text-align: center;
+    font-weight: bold;
+    color: #185510;
 }
 
 /*? Botão de voltar ao topo*/
-.btn-topo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#btn-topo{
+    display: none;
     width: 40px;
     height: 40px;
-    padding: 10px;
-    border: 3px solid green;
+    padding: 9px;
+    border: 3px solid #185510;
     border-radius: 20px;
-    color: white;
-    background-color: greenyellow;
-    right: 15px;
-    bottom: 10px;
+    background-color: green;
     position: fixed;
     cursor: pointer;
+    color: white;
+    right: 15px;
+    bottom: 15px;
 }
 
-.btn-topo::after{
-    content: "";
-    font-size: 2rem;
-    text-align: center;
+#btn-topo i{
+    font-size: 1.1rem;
     font-weight: bold;
 }
 
-.btn-topo:hover{
+#btn-topo:hover{
     background-color: white;
     color: green;
     border-color: 1px solid #fff;
+    transition: .8s;
 }
