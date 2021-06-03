@@ -29,6 +29,7 @@ html, body{
 /*? Menu */
 .menu-header{
     display: block;
+    background-color: #41901C;
 }
 
 .menu-header .menu-logo{
@@ -47,15 +48,7 @@ html, body{
     max-width: 100%;
     margin: 0 auto;
     padding: 20px;
-    background-color: #41901C;
 }
-
-/*.menu-principal{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}*/
 
 .menu-nav{
     max-width: 100%;
@@ -104,7 +97,7 @@ html, body{
 .conteudo-principal.inicio{
     max-width: 1000px;
     margin: 0 auto;
-    padding: 60px 10px;
+    padding: 60px 10px 40px 10px;
 }
 
 .conteudo-principal.inicio h1{
@@ -139,39 +132,46 @@ html, body{
     border-bottom: 2.5px solid #F2E7AE;
 }
 
+/*? Conteúdo Inicial - Seção de Projeto */
+
+/*? Conteúdo Inicial - Seção de Benefícios */
+
+/*? Conteúdo Inicial - Seção de Equipe */
 .equipe .card-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(3, 235px);
+    margin: 0 auto;
+    gap: 25px;
+    justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding-bottom: 50px;
 }
 
 .equipe .card-participante{
+    margin: 0;
+    max-width: 100%;
     text-align: center;
-    border: 1px solid #000;
+    font-size: 1.2rem;
+    color: #a78c3b;
+    font-weight: bold;
+    background-color: #F2E7AE;
+    text-shadow: 0 1px 1.5px;
     border-radius: 15px;
 }
 
 .equipe .card-participante img{
+    width: 100%;
     border-radius: 15px 15px 0 0;
-    max-width: 100%;
-    height: 150px;
-    border-bottom: 1px solid #000;
+    height: 280px;
 }
-
-/*? Conteúdo Inicial - Seção de Projeto */
-
 
 /*? Conteúdo Inicial - Seção de Parcerias */
-.parcerias{
-    line-height: 15px;
-}
-
 .parceiros{
     display: grid;
     column-gap: 10px;
     grid-template-columns: auto auto;
+    line-break: 20px;
 }
 
 .parceiros .fatec-osasco a, .parceiros .cps a{
