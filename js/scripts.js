@@ -42,13 +42,15 @@ function exibirBotao() {
 window.addEventListener("scroll", exibirBotao);
 
 //? menu de navegação fixo
-window.onscroll = function() {menuFixo()};
-
 const nav = document.querySelector(".menu-nav");
-const fixo = nav.offSetTop;
+const fixo = nav.scrollTop;
+
+window.onscroll = function() {
+    menuFixo();
+}
 
 function menuFixo(){
-    if(Window.pageYOffset > fixo){
+    if(Window.pageYOffset >= fixo){
         nav.classList.add("fixo");
     }
     else{
@@ -56,12 +58,16 @@ function menuFixo(){
     }
 }
 
-//? links de navegação ativos
-const link = document.querySelector(".menu-nav li");
-link.addEventListener("click", linkAtivo)
+//? mensagem formulário de contato
+const btnEnviar = document.querySelector(".btn-form");
+const messagem = document.getElementById("msg-form");
+btnEnviar.addEventListener("click", exibirMensagem);
 
-function linkAtivo(){
-    if(link === onclick){
-        link.style.bgColor = red;
+function exibirMensagem() {
+    if(btnEnviar){
+        messagem.classList.add("sucesso");
+        messagem.style.display = "block";
     }
 }
+
+console.log(exibirMensagem());

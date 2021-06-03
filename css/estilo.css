@@ -56,6 +56,16 @@ html, body{
     background-color: #87D936;
 }
 
+.menu-nav .fixo{
+    top: 0;
+    position: fixed;
+    max-width: 100%;
+}
+
+.menu-nav .fixo + .conteudo-principal{
+    padding-top: 60px;
+}
+
 .menu-nav ul{
     margin: 0;
     padding: 0;
@@ -94,13 +104,13 @@ html, body{
 }
 
 /*? Conteúdo Inicial */
-.conteudo-principal.inicio{
+.conteudo-principal.inicio, .conteudo-principal.contato{
     max-width: 1000px;
     margin: 0 auto;
     padding: 60px 10px 40px 10px;
 }
 
-.conteudo-principal.inicio h1{
+.conteudo-principal.inicio h1, .conteudo-principal.contato h1{
     font-size: 2.5rem;
 }
 
@@ -201,6 +211,53 @@ figure.fatec-osasco img, figure.cps img{
 /*? Conteúdo Pontos de Coleta */
 
 /*? Conteúdo Contato */
+section.contato{
+    box-sizing: border-box;
+}
+
+section.contato h1{
+    border-bottom: 2px solid #F2E7AE;
+}
+
+section.contato h1::before{
+    content: "";
+    border-left: 7px solid #185510;
+    margin-right: 10px;
+}
+
+section.contato p{
+    margin: 0 auto;
+    font-weight: normal;
+}
+
+.container-contato{
+    display: grid;
+    grid-template-columns: 200px 200px;
+    gap: 25px;
+}
+
+.form-contato{
+    line-height: 25px;
+}
+
+.form-contato .btn-form{
+    margin-left: 50%;
+}
+
+#msg-form .sucesso{
+    padding: 5px;
+    max-width: 200px;
+    display: none;
+    border: 1px solid green;
+    background-color: #87D936;
+    color: #fff;
+}
+
+#msg-form .erro{
+    border: 1px solid red;
+    background-color: red;
+    color: #fff;
+}
 
 /*? Footer */
 footer{
@@ -230,8 +287,8 @@ footer p{
     position: fixed;
     cursor: pointer;
     color: white;
-    right: 15px;
-    bottom: 15px;
+    right: 25px;
+    bottom: 25px;
 }
 
 #btn-topo i{
