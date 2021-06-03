@@ -42,6 +42,19 @@ function exibirBotao() {
 window.addEventListener("scroll", exibirBotao);
 
 //? menu de navegação fixo
+window.onscroll = function() {menuFixo()};
+
+const nav = document.querySelector(".menu-nav");
+const fixo = nav.offSetTop;
+
+function menuFixo(){
+    if(Window.pageYOffset > fixo){
+        nav.classList.add("fixo");
+    }
+    else{
+        nav.classList.remove("fixo");
+    }
+}
 
 //? links de navegação ativos
 const link = document.querySelector(".menu-nav li");

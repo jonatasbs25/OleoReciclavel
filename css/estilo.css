@@ -31,6 +31,18 @@ html, body{
     display: block;
 }
 
+.menu-header .menu-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu-logo img{
+    width: 200px;
+    height: 150px;
+}
+
 .menu-principal{
     max-width: 100%;
     margin: 0 auto;
@@ -55,29 +67,37 @@ html, body{
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     list-style: none;
 }
 
 .menu-nav li{
-    border: 1px solid #000;
-    padding: 13px;
+    border: 1px  solid #87D936;
+    padding: 8px 15px 8px 15px;
 }
 
-.menu-nav a{
+.menu-nav i{
+    margin-right: 5px;
+}
+
+.menu-nav a, .menu-nav i{
     font-size: 1.4rem;
     text-decoration: none;
     color: white;
 }
 
 .menu-nav li:hover{
+    border: 1px solid #185510;
     background-color: #185510;
-    transition: 3s;
+    transition: 1s;
 }
 
-.menu-nav a:visited{
+.menu-nav .active, .menu-nav .active a, .menu-nav .active i{
+    border: 1px solid #185510;
     background-color: #185510;
+    color: #D9B855;
 }
 
 /*? Conteúdo Inicial */
@@ -144,14 +164,36 @@ html, body{
 
 
 /*? Conteúdo Inicial - Seção de Parcerias */
+.parcerias{
+    line-height: 15px;
+}
+
 .parceiros{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: auto auto;
+}
+
+.parceiros .fatec-osasco a, .parceiros .cps a{
+    text-decoration: none;
+}
+
+.parcerias p{
+    font-style: italic;
+    color: #1b1b1b60;
 }
 
 figure.fatec-osasco, figure.cps{
-    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+figure.fatec-osasco img, figure.cps img{
+    max-width: 280px;
+    height: 150px;
+    border-radius: 15px;
 }
 
 /*? Conteúdo Ciclo do Óleo */
@@ -178,13 +220,13 @@ footer p{
 
 /*? Botão de voltar ao topo*/
 #btn-topo{
-    display: none;
+    display: block;
     width: 40px;
     height: 40px;
     padding: 9px;
     border: 3px solid #185510;
     border-radius: 20px;
-    background-color: green;
+    background-color: #185510;
     position: fixed;
     cursor: pointer;
     color: white;
