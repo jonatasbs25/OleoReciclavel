@@ -40,7 +40,7 @@ html, body{
 }
 
 .menu-logo img{
-    width: 200px;
+    max-width: 320px;
     height: 150px;
 }
 
@@ -107,7 +107,7 @@ html, body{
 .conteudo-principal.inicio, .conteudo-principal.contato{
     max-width: 1000px;
     margin: 0 auto;
-    padding: 60px 10px 40px 10px;
+    padding: 40px 10px 40px 10px;
 }
 
 .conteudo-principal.inicio h1, .conteudo-principal.contato h1{
@@ -178,10 +178,11 @@ html, body{
 
 /*? Conteúdo Inicial - Seção de Parcerias */
 .parceiros{
-    display: grid;
-    column-gap: 10px;
-    grid-template-columns: auto auto;
-    line-break: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 .parceiros .fatec-osasco a, .parceiros .cps a{
@@ -215,48 +216,124 @@ section.contato{
     box-sizing: border-box;
 }
 
-section.contato h1{
-    border-bottom: 2px solid #F2E7AE;
-}
-
 section.contato h1::before{
     content: "";
     border-left: 7px solid #185510;
     margin-right: 10px;
 }
 
-section.contato p{
-    margin: 0 auto;
-    font-weight: normal;
-}
-
 .container-contato{
-    display: grid;
-    grid-template-columns: 200px 200px;
-    gap: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    flex-wrap: wrap;
 }
 
-.form-contato{
-    line-height: 25px;
+.container-contato hr{
+    height: 50vh;
+    border: 1px solid #F2E7AE;
+}
+
+.container-contato .msg-contato, .container-contato .form-contato{
+    margin: 0 auto;
+    font-size: 1.3rem;
+}
+
+.container-contato .msg-contato{
+    max-width: 400px;
+}
+
+.container-contato .msg-contato b{
+    color: #D9B855;
+    text-shadow: 1px 0 1px;
+} 
+
+.container-contato .form-contato{
+    line-height: 45px;
+    top: -5px;
+}
+
+.form-contato label{
+    margin: 0;
+}
+
+.form-contato input[type="text"], .form-contato input[type="email"], .form-contato textarea{
+    border-radius: 5px;
+    border: 2px solid #D9B855;
+    padding: 10px 10px 10px;
+    width: 480px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.form-contato input[type="text"]::placeholder, .form-contato input[type="email"]::placeholder, .form-contato textarea{
+    font-weight: bold;
+    margin: 0;
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .form-contato .btn-form{
-    margin-left: 50%;
+    margin-top: 25px;   
+    background-color: #185510;
+    color: white;
+    border-radius: 5px;
+    border: 3px solid #185510;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 11px 25px 11px 25px;
+    cursor: pointer;
 }
 
-#msg-form .sucesso{
-    padding: 5px;
-    max-width: 200px;
+.form-contato .btn-form.limpar{
+    margin-left: 15px;
+    background-color: #fff;
+    color: #185510;
+}
+
+.form-contato .btn-form:hover{
+    color: #185510;
+    background-color: #fff;
+    transition: all ease-in-out .8s;
+}
+
+.form-contato .btn-form.limpar:hover{
+    color: #fff;
+    background-color: #185510;
+    transition: all ease-in-out .8s;
+}
+
+.msg-erro{
+    margin: 0 auto; 
     display: none;
-    border: 1px solid green;
-    background-color: #87D936;
-    color: #fff;
+    color: rgb(206, 33, 33);
 }
 
-#msg-form .erro{
-    border: 1px solid red;
-    background-color: red;
+/*#msg-process-form{
+    display: none;
     color: #fff;
+    background-color: #099b4b;
+    border-radius: 5px;
+    padding-left: 15px;
+}*/
+
+#msg-process-form{
+    display: none;
+    color: #fff;
+    background-color: rgb(206, 33, 33);
+    border-radius: 5px;
+    padding-left: 15px;
+}
+
+#msg-process-form .close-btn{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 40%;
+    cursor: pointer;
+}
+
+#msg-process-form .close-btn:hover{
+    color: #000;
 }
 
 /*? Footer */
@@ -277,7 +354,7 @@ footer p{
 
 /*? Botão de voltar ao topo*/
 #btn-topo{
-    display: block;
+    display: none;
     width: 40px;
     height: 40px;
     padding: 9px;
@@ -289,6 +366,7 @@ footer p{
     color: white;
     right: 25px;
     bottom: 25px;
+    transition: right .7s;
 }
 
 #btn-topo i{

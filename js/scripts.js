@@ -58,16 +58,45 @@ function menuFixo(){
     }
 }
 
-//? mensagem formulário de contato
-const btnEnviar = document.querySelector(".btn-form");
-const messagem = document.getElementById("msg-form");
-btnEnviar.addEventListener("click", exibirMensagem);
+//? mensagem de erro formulário de contato
+const btnForm = document.querySelector(".btn-form");
+btnForm.addEventListener("click", exibirMensagem);
 
 function exibirMensagem() {
-    if(btnEnviar){
-        messagem.classList.add("sucesso");
-        messagem.style.display = "block";
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const titulo = document.getElementById("titulo").value;
+    const mensagem = document.getElementById("mensagem").value;
+    const msgProcessForm = document.querySelector("#msg-process-form");
+
+    if(nome === "" && email === "" && titulo === "" && mensagem === ""){
+        msgProcessForm.style.display = "block";
+        msgProcessForm.innerHTML = 'Falha ao enviar mensagem.<span class="close-btn">X</span>';
+        msgProcessForm.classList.add("erro");
+    }
+    else if(email === "" && titulo === "" && mensagem === ""){
+        msgProcessForm.style.display = "block";
+        msgProcessForm.innerHTML = 'Falha ao enviar mensagem.<span class="close-btn">X</span>';
+    }
+    else if(titulo === "" && mensagem === ""){
+        msgProcessForm.style.display = "block";
+        msgProcessForm.innerHTML = 'Falha ao enviar mensagem.<span class="close-btn">X</span>';
+    }
+    else if(mensagem === ""){
+        msgProcessForm.style.display = "block";
+        msgProcessForm.innerHTML = 'Falha ao enviar mensagem.<span class="close-btn">X</span>';
+    }
+    else{
+        msgProcessForm.style.display = "block";
+        msgProcessForm.innerHTML = 'Mensagem enviado com sucesso.<span class="close-btn">X</span>';
     }
 }
 
-console.log(exibirMensagem());
+//? fechar mensagem de erro
+const closeBtn = document.querySelector(".close-btn");
+closeBtn.addEventListener("click", fecharMensagem);
+
+function fecharMensagem(){
+    const msgErro = document.querySelector("#msg-process-form");
+    msgErro.style.visibility = "hidden";
+}
