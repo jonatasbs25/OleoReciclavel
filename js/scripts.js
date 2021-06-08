@@ -1,4 +1,4 @@
-//? formatando a horário de 1 para 01
+/*//? formatando a horário de 1 para 01
 const formatarZeros = (n) => {
     return ("0" + n).slice(-2);
 }
@@ -42,20 +42,18 @@ function exibirBotao() {
 window.addEventListener("scroll", exibirBotao);
 
 //? menu de navegação fixo
-const nav = document.querySelector(".menu-nav");
-const fixo = nav.scrollTop;
+window.onload = function(e){
+    const offSet = document.getElementsByClassName("menu-nav")[0].offsetTop;
+    const navFixo = document.getElementById("navFixo");
 
-window.onscroll = function() {
-    menuFixo();
-}
-
-function menuFixo(){
-    if(Window.pageYOffset >= fixo){
-        nav.classList.add("fixo");
-    }
-    else{
-        nav.classList.remove("fixo");
-    }
+    document.addEventListener("scroll", () => {
+        if (document.body.scrollTop > offSet || document.documentElement.scrollTop > offSet){
+            navFixo.style.position = 'fixed';
+        } 
+        else {
+            navFixo.style.position = 'initial';
+        }
+    });
 }
 
 //? mensagem de erro formulário de contato
@@ -71,32 +69,73 @@ function exibirMensagem() {
 
     if(nome === "" && email === "" && titulo === "" && mensagem === ""){
         msgProcessForm.style.display = "block";
-        msgProcessForm.innerHTML = 'Falha ao enviar mensagem.<span class="close-btn">X</span>';
+        msgProcessForm.innerHTML = 'Falha ao enviar mensagem.<a href="javascript:void(0)" class="close-btn">X</a>';
         msgProcessForm.classList.add("erro");
     }
     else if(email === "" && titulo === "" && mensagem === ""){
         msgProcessForm.style.display = "block";
-        msgProcessForm.innerHTML = 'Falha ao enviar mensagem.<span class="close-btn">X</span>';
+        msgProcessForm.innerHTML = 'Falha ao enviar mensagem.<a href="javascript:void(0)" class="close-btn">X</a>';
     }
     else if(titulo === "" && mensagem === ""){
         msgProcessForm.style.display = "block";
-        msgProcessForm.innerHTML = 'Falha ao enviar mensagem.<span class="close-btn">X</span>';
+        msgProcessForm.innerHTML = 'Falha ao enviar mensagem.<a href="javascript:void(0)" class="close-btn">X</a>';
     }
     else if(mensagem === ""){
         msgProcessForm.style.display = "block";
-        msgProcessForm.innerHTML = 'Falha ao enviar mensagem.<span class="close-btn">X</span>';
+        msgProcessForm.innerHTML = 'Falha ao enviar mensagem.<a href="javascript:void(0)" class="close-btn">X</a>';
     }
     else{
         msgProcessForm.style.display = "block";
-        msgProcessForm.innerHTML = 'Mensagem enviado com sucesso.<span class="close-btn">X</span>';
+        msgProcessForm.innerHTML = 'Mensagem enviado com sucesso.<a href="javascript:void(0)" class="close-btn">X</a>';
+    }
+}
+*/
+//? exibir pontos de coletas
+const divPontosColeta = document.querySelector("#pontos-coleta");
+const btnPesquisar = document.querySelector(".btn-filtro");
+btnPesquisar.addEventListener("click", exibirTodos);
+
+const pontosColeta = [
+    {
+        endereco: "AVENIDA MARECHAL RONDON, 1215 - CENTRO - OSASCO - SP CEP: 06093-015",
+        bairro: "CENTRO",
+        cep: "06093-015",
+        tipoEmpresa: "EMPRESA",
+        estabelecimento: "BELGO BEKAERT ARAMES LTDA",
+    },
+    {
+        endereco: "AVENIDA MARECHAL RONDON, 1215",
+        bairro: "PARQUE IMPERIAL",
+        cep: "06083-015",
+        tipoEmpresa: "MERCADO",
+        estabelecimento: "BELGO BEKAERT ARAMES LTDA",
+    },
+];
+
+function exibirTodos(){
+    for(let i = 0; i <= pontosColeta.length; i++){
+        for (const valores of pontosColeta){
+            divPontosColeta.innerHTML += [
+                `<div class="pontos-coleta">`,
+                    `<p class="endereco"><i class="fa fa-map-marker"></i> ${valores.endereco}</p>`,
+                    `<p class="bairro">Bairro: ${valores.bairro}</p>`,
+                    `<p class="cep">CEP: ${valores.cep}</p>`,
+                    `<p class="tipo-estabelecimento">Tipo: ${valores.tipoEmpresa}</p>`,
+                    `<p class="estabelecimento">Empresa: ${valores.estabelecimento}</p>`,
+                `</div>`
+            ].join("\n");
+        }
     }
 }
 
-//? fechar mensagem de erro
-const closeBtn = document.querySelector(".close-btn");
-closeBtn.addEventListener("click", fecharMensagem);
-
-function fecharMensagem(){
-    const msgErro = document.querySelector("#msg-process-form");
-    msgErro.style.visibility = "hidden";
+function mostrarPorBairro(bairro) {
+	for (const valores of pontosColeta){
+        
+    }
 }
+
+/*function mostrarPorCep() {
+}
+
+function pesquisarEndereco() {
+}*/

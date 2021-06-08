@@ -330,6 +330,8 @@ section.contato h1::before{
     font-family: Arial, Helvetica, sans-serif;
     margin-left: 40%;
     cursor: pointer;
+    color: #fff;
+    text-decoration: none;
 }
 
 #msg-process-form .close-btn:hover{
