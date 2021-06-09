@@ -1,4 +1,4 @@
-/*//? formatando a horário de 1 para 01
+//? formatando a horário de 1 para 01
 const formatarZeros = (n) => {
     return ("0" + n).slice(-2);
 }
@@ -41,20 +41,8 @@ function exibirBotao() {
 }
 window.addEventListener("scroll", exibirBotao);
 
-//? menu de navegação fixo
-window.onload = function(e){
-    const offSet = document.getElementsByClassName("menu-nav")[0].offsetTop;
-    const navFixo = document.getElementById("navFixo");
+//? slide-show
 
-    document.addEventListener("scroll", () => {
-        if (document.body.scrollTop > offSet || document.documentElement.scrollTop > offSet){
-            navFixo.style.position = 'fixed';
-        } 
-        else {
-            navFixo.style.position = 'initial';
-        }
-    });
-}
 
 //? mensagem de erro formulário de contato
 const btnForm = document.querySelector(".btn-form");
@@ -69,27 +57,28 @@ function exibirMensagem() {
 
     if(nome === "" && email === "" && titulo === "" && mensagem === ""){
         msgProcessForm.style.display = "block";
-        msgProcessForm.innerHTML = 'Falha ao enviar mensagem.<a href="javascript:void(0)" class="close-btn">X</a>';
+        msgProcessForm.innerHTML = 'Falha ao enviar mensagem.';
         msgProcessForm.classList.add("erro");
     }
     else if(email === "" && titulo === "" && mensagem === ""){
         msgProcessForm.style.display = "block";
-        msgProcessForm.innerHTML = 'Falha ao enviar mensagem.<a href="javascript:void(0)" class="close-btn">X</a>';
+        msgProcessForm.innerHTML = 'Falha ao enviar mensagem.';
     }
     else if(titulo === "" && mensagem === ""){
         msgProcessForm.style.display = "block";
-        msgProcessForm.innerHTML = 'Falha ao enviar mensagem.<a href="javascript:void(0)" class="close-btn">X</a>';
+        msgProcessForm.innerHTML = 'Falha ao enviar mensagem.';
     }
     else if(mensagem === ""){
         msgProcessForm.style.display = "block";
-        msgProcessForm.innerHTML = 'Falha ao enviar mensagem.<a href="javascript:void(0)" class="close-btn">X</a>';
+        msgProcessForm.innerHTML = 'Falha ao enviar mensagem.';
     }
     else{
+        msgProcessForm.classList.toggle("sucess");
         msgProcessForm.style.display = "block";
-        msgProcessForm.innerHTML = 'Mensagem enviado com sucesso.<a href="javascript:void(0)" class="close-btn">X</a>';
+        msgProcessForm.innerHTML = 'Mensagem enviada com sucesso.';
     }
 }
-*/
+
 //? exibir pontos de coletas
 const divPontosColeta = document.querySelector("#pontos-coleta");
 const btnPesquisar = document.querySelector(".btn-filtro");
@@ -114,7 +103,7 @@ const pontosColeta = [
 
 function exibirTodos(){
     for(let i = 0; i <= pontosColeta.length; i++){
-        for (const valores of pontosColeta){
+        for (let valores of pontosColeta){
             divPontosColeta.innerHTML += [
                 `<div class="pontos-coleta">`,
                     `<p class="endereco"><i class="fa fa-map-marker"></i> ${valores.endereco}</p>`,

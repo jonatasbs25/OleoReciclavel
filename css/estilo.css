@@ -103,50 +103,62 @@ html, body{
     color: #D9B855;
 }
 
-/*? Conteúdo Inicial */
-.conteudo-principal.inicio, .conteudo-principal.contato{
+/*? Conteúdo Principal */
+.conteudo-principal.inicio, .conteudo-principal.ciclo-do-oleo, .conteudo-principal.pontos-coleta, .conteudo-principal.contato{
     max-width: 1000px;
     margin: 0 auto;
     padding: 40px 10px 40px 10px;
 }
 
-.conteudo-principal.inicio h1, .conteudo-principal.contato h1{
+.conteudo-principal.inicio h1, .conteudo-principal.ciclo-do-oleo h1, .conteudo-principal.contato h1{
     font-size: 2.5rem;
 }
 
-.conteudo-principal.inicio .projeto h1::before{
+.conteudo-principal.inicio .projeto h1::before, .conteudo-principal.ciclo-do-oleo .ciclo-oleo h1::before{
     content: "";
     border-left: 7px solid #185510;
     margin-right: 10px;
 }
 
-.conteudo-principal.inicio .beneficios h1::before{
+.conteudo-principal.inicio .beneficios h1::before, .conteudo-principal.ciclo-do-oleo .descarte-oleo h1::before{
     content: "";
     border-left: 7px solid #41901C;
     margin-right: 10px;
 }
 
-.conteudo-principal.inicio .equipe h1::before{
+.conteudo-principal.inicio .equipe h1::before, .conteudo-principal.ciclo-do-oleo .produtos-reciclagem h1::before{
     content: "";
     border-left: 7px solid #87D936;
     margin-right: 10px;
 }
 
-.conteudo-principal.inicio .parcerias h1::before{
+.conteudo-principal.inicio .parcerias h1::before, .conteudo-principal.ciclo-do-oleo .reciclagem-caseira h1::before{
     content: "";
     border-left: 7px solid #D9B855;
     margin-right: 10px;
 }
 
-.conteudo-principal.inicio .projeto, .conteudo-principal.inicio .beneficios, .conteudo-principal.inicio .equipe{
-    border-bottom: 2.5px solid #F2E7AE;
+.conteudo-principal.inicio .projeto, .conteudo-principal.inicio .beneficios, .conteudo-principal.inicio .equipe,
+.conteudo-principal.ciclo-do-oleo .ciclo-oleo, .conteudo-principal.ciclo-do-oleo .descarte-oleo, 
+.conteudo-principal.ciclo-do-oleo .produtos-reciclagem{
+    border-bottom: 3px solid #F2E7AE;
 }
 
 /*? Conteúdo Inicial - Seção de Projeto */
+.conteudo-principal.inicio .projeto h1{
+    color: #185510;
+}
+
 
 /*? Conteúdo Inicial - Seção de Benefícios */
-
+.conteudo-principal.inicio .beneficios h1{
+    color: #41901C;
+}
 /*? Conteúdo Inicial - Seção de Equipe */
+.conteudo-principal.inicio .equipe h1{
+    color: #87D936;
+}
+
 .equipe .card-container{
     max-width: 800px;
     display: grid;
@@ -177,6 +189,10 @@ html, body{
 }
 
 /*? Conteúdo Inicial - Seção de Parcerias */
+.conteudo-principal.inicio .parcerias h1{
+    color: #D9B855;
+}
+
 .parceiros{
     display: flex;
     justify-content: center;
@@ -204,7 +220,6 @@ figure.fatec-osasco, figure.cps{
 figure.fatec-osasco img, figure.cps img{
     max-width: 280px;
     height: 150px;
-    border-radius: 15px;
 }
 
 /*? Conteúdo Ciclo do Óleo */
@@ -326,18 +341,13 @@ section.contato h1::before{
     padding-left: 15px;
 }
 
-#msg-process-form .close-btn{
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 40%;
-    cursor: pointer;
+#msg-process-form.sucess{
+    display: none;
     color: #fff;
-    text-decoration: none;
+    background-color: #099b4b;
+    border-radius: 5px;
+    padding-left: 15px;
 }
-
-#msg-process-form .close-btn:hover{
-    color: #000;
-}
-
 /*? Footer */
 footer{
     display: flex;
