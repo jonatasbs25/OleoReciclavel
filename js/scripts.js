@@ -54,21 +54,10 @@ function exibirMensagem() {
     const titulo = document.getElementById("titulo").value;
     const mensagem = document.getElementById("mensagem").value;
     const msgProcessForm = document.querySelector("#msg-process-form");
+    const validarForm = nome === "" || email === "" || titulo === "" || mensagem === "";
 
-    if(nome === "" && email === "" && titulo === "" && mensagem === ""){
-        msgProcessForm.style.display = "block";
-        msgProcessForm.innerHTML = 'Falha ao enviar mensagem.';
-        msgProcessForm.classList.add("erro");
-    }
-    else if(email === "" && titulo === "" && mensagem === ""){
-        msgProcessForm.style.display = "block";
-        msgProcessForm.innerHTML = 'Falha ao enviar mensagem.';
-    }
-    else if(titulo === "" && mensagem === ""){
-        msgProcessForm.style.display = "block";
-        msgProcessForm.innerHTML = 'Falha ao enviar mensagem.';
-    }
-    else if(mensagem === ""){
+    if(validarForm){
+        msgProcessForm.classList.toggle("erro");
         msgProcessForm.style.display = "block";
         msgProcessForm.innerHTML = 'Falha ao enviar mensagem.';
     }
@@ -84,7 +73,7 @@ const divPontosColeta = document.querySelector("#pontos-coleta");
 const btnPesquisar = document.querySelector(".btn-filtro");
 btnPesquisar.addEventListener("click", exibirTodos);
 
-const pontosColeta = [
+let pontosColeta = [
     {
         endereco: "AVENIDA MARECHAL RONDON, 1215 - CENTRO - OSASCO - SP CEP: 06093-015",
         bairro: "CENTRO",
@@ -101,7 +90,7 @@ const pontosColeta = [
     },
 ];
 
-function exibirTodos(){
+function exibirTodos(pontosColeta){
     for(let i = 0; i <= pontosColeta.length; i++){
         for (let valores of pontosColeta){
             divPontosColeta.innerHTML += [

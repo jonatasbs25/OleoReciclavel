@@ -32,31 +32,31 @@ html, body{
     background-color: #41901C;
 }
 
-.menu-header .menu-logo{
+.menu-header .menu-principal{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.menu-header .menu-principal .menu-logo{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.menu-logo img{
+.menu-header .menu-principal .menu-logo img{
     max-width: 320px;
     height: 150px;
 }
 
-.menu-principal{
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.menu-nav{
+.menu-header .menu-nav{
     max-width: 100%;
     display: block;
     background-color: #87D936;
 }
 
-.menu-nav .fixo{
+/*.menu-header .menu-nav .fixo{
     top: 0;
     position: fixed;
     max-width: 100%;
@@ -64,9 +64,9 @@ html, body{
 
 .menu-nav .fixo + .conteudo-principal{
     padding-top: 60px;
-}
+}*/
 
-.menu-nav ul{
+.menu-header .menu-nav ul{
     margin: 0;
     padding: 0;
     display: flex;
@@ -76,28 +76,28 @@ html, body{
     list-style: none;
 }
 
-.menu-nav li{
+.menu-header .menu-nav li{
     border: 1px  solid #87D936;
     padding: 8px 15px 8px 15px;
 }
 
-.menu-nav i{
+.menu-header .menu-nav i{
     margin-right: 5px;
 }
 
-.menu-nav a, .menu-nav i{
+.menu-header .menu-nav a, .menu-nav i{
     font-size: 1.4rem;
     text-decoration: none;
     color: white;
 }
 
-.menu-nav li:hover{
+.menu-header .menu-nav li:hover{
     border: 1px solid #185510;
     background-color: #185510;
     transition: 1s;
 }
 
-.menu-nav .active, .menu-nav .active a, .menu-nav .active i{
+.menu-header .menu-nav .active, .menu-nav .active a, .menu-nav .active i{
     border: 1px solid #185510;
     background-color: #185510;
     color: #D9B855;
@@ -110,7 +110,7 @@ html, body{
     padding: 40px 10px 40px 10px;
 }
 
-.conteudo-principal.inicio h1, .conteudo-principal.ciclo-do-oleo h1, .conteudo-principal.contato h1{
+.conteudo-principal.inicio h1, .conteudo-principal.ciclo-do-oleo h1, .conteudo-principal.pontos-coleta h1, .conteudo-principal.contato h1{
     font-size: 2.5rem;
 }
 
@@ -120,7 +120,8 @@ html, body{
     margin-right: 10px;
 }
 
-.conteudo-principal.inicio .beneficios h1::before, .conteudo-principal.ciclo-do-oleo .descarte-oleo h1::before{
+.conteudo-principal.inicio .beneficios h1::before, .conteudo-principal.ciclo-do-oleo .descarte-oleo h1::before, 
+.conteudo-principal.pontos-coleta h1::before{
     content: "";
     border-left: 7px solid #41901C;
     margin-right: 10px;
@@ -132,7 +133,8 @@ html, body{
     margin-right: 10px;
 }
 
-.conteudo-principal.inicio .parcerias h1::before, .conteudo-principal.ciclo-do-oleo .reciclagem-caseira h1::before{
+.conteudo-principal.inicio .parcerias h1::before, .conteudo-principal.ciclo-do-oleo .reciclagem-caseira h1::before
+, .conteudo-principal.contato h1::before{
     content: "";
     border-left: 7px solid #D9B855;
     margin-right: 10px;
@@ -144,21 +146,67 @@ html, body{
     border-bottom: 3px solid #F2E7AE;
 }
 
-/*? Conteúdo Inicial - Seção de Projeto */
-.conteudo-principal.inicio .projeto h1{
+.conteudo-principal.inicio .projeto h1, .conteudo-principal.ciclo-do-oleo .ciclo-oleo h1{
     color: #185510;
 }
 
-
-/*? Conteúdo Inicial - Seção de Benefícios */
-.conteudo-principal.inicio .beneficios h1{
+.conteudo-principal.inicio .beneficios h1, .conteudo-principal.ciclo-do-oleo .descarte-oleo h1,
+.conteudo-principal.pontos-coleta h1{
     color: #41901C;
 }
-/*? Conteúdo Inicial - Seção de Equipe */
-.conteudo-principal.inicio .equipe h1{
+
+.conteudo-principal.inicio .equipe h1, .conteudo-principal.ciclo-do-oleo .produtos-reciclagem h1{
     color: #87D936;
 }
 
+.conteudo-principal.inicio .parcerias h1, .conteudo-principal.ciclo-do-oleo .reciclagem-caseira h1,
+.conteudo-principal.contato h1{
+    color: #D9B855;
+}
+
+/*? Conteúdo Inicial - Seção de Projeto */
+.inicio .slide-show{
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: #41901C;
+    padding: 100px;
+}
+
+
+.projeto .teste-img{
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: #41901C;
+    padding: 100px;
+}
+
+.beneficios .teste{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.agua{
+    background-color: blue;
+    padding: 100px;
+    color: white;
+}
+
+.arvore{
+    background-color: red;
+    padding: 100px;
+}
+
+.trabalho{
+    background-color: green;
+    padding: 100px;
+}
+
+/*? Conteúdo Inicial - Seção de Benefícios */
+
+/*? Conteúdo Inicial - Seção de Equipe */
 .equipe .card-container{
     max-width: 800px;
     display: grid;
@@ -189,10 +237,6 @@ html, body{
 }
 
 /*? Conteúdo Inicial - Seção de Parcerias */
-.conteudo-principal.inicio .parcerias h1{
-    color: #D9B855;
-}
-
 .parceiros{
     display: flex;
     justify-content: center;
@@ -223,20 +267,31 @@ figure.fatec-osasco img, figure.cps img{
 }
 
 /*? Conteúdo Ciclo do Óleo */
+.conteudo-principal.ciclo-do-oleo .produtos-reciclagem .card-container-produtos{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+.conteudo-principal.ciclo-do-oleo .produtos-reciclagem .card-container-produtos ul{
+    list-style: none;
+}
+
+.conteudo-principal.ciclo-do-oleo .reciclagem-caseira .receita{
+    margin: 0 auto;
+    padding: 0 15px 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
 
 /*? Conteúdo Pontos de Coleta */
 
 /*? Conteúdo Contato */
-section.contato{
-    box-sizing: border-box;
-}
-
-section.contato h1::before{
-    content: "";
-    border-left: 7px solid #185510;
-    margin-right: 10px;
-}
-
 .container-contato{
     display: flex;
     justify-content: space-between;
