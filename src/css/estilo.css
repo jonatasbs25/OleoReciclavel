@@ -270,17 +270,28 @@ figure.fatec-osasco img, figure.cps img{
 
 /*? Conteúdo Ciclo do Óleo */
 .conteudo-principal.ciclo-do-oleo .produtos-reciclagem .card-container-produtos{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    gap: 40px;
+    justify-content: center;
     text-align: center;
     list-style: none;
     font-size: 1.3rem;
+    padding-bottom: 20px;
 }
 
 .conteudo-principal.ciclo-do-oleo .produtos-reciclagem .card-container-produtos .card-produtos{
-    padding: 5px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
     border-radius: 15px;
+}
+
+.conteudo-principal.ciclo-do-oleo .produtos-reciclagem .card-container-produtos .card-produtos:hover{
+    transform: scale(1.1);
+    transition: .8s;
 }
 
 .conteudo-principal.ciclo-do-oleo .produtos-reciclagem .card-container-produtos .card-produtos img{
@@ -292,22 +303,48 @@ figure.fatec-osasco img, figure.cps img{
     background-color: #185510;
 }
 
-.conteudo-principal.ciclo-do-oleo .produtos-reciclagem .card-container-produtos .titulo,
-.conteudo-principal.ciclo-do-oleo .produtos-reciclagem .card-container-produtos li{
-    color: white;
-    text-shadow: 0 1px 2px black;
+.conteudo-principal.ciclo-do-oleo .produtos-reciclagem .card-container-produtos .card-produtos.sabao{
+    
+    background-color: #407093;
 }
 
-.conteudo-principal.ciclo-do-oleo .produtos-reciclagem .card-container-produtos ul{
-    display: block;
-    list-style: none;
-    font-size: 1.2rem;
-    padding: 0;
+.conteudo-principal.ciclo-do-oleo .produtos-reciclagem .card-container-produtos .card-produtos.produtos-limpeza{
+    background-color: #3E6DAB;
+}
+
+.conteudo-principal.ciclo-do-oleo .produtos-reciclagem .card-container-produtos .card-produtos.tintas{
+    background-color: #f5cc50;
+}
+
+.conteudo-principal.ciclo-do-oleo .produtos-reciclagem .card-container-produtos .card-produtos.massa{
+    background-color: #185510;
+}
+
+.conteudo-principal.ciclo-do-oleo .produtos-reciclagem .card-container-produtos .card-produtos.racao{
+    background-color: #a78c3b;
+}
+
+.conteudo-principal.ciclo-do-oleo .produtos-reciclagem .card-container-produtos .titulo{
+    color: white;
+}
+
+.conteudo-principal.ciclo-do-oleo .produtos-reciclagem .creditos p{
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+.conteudo-principal.ciclo-do-oleo .produtos-reciclagem .creditos p a{
+    color: #D9B855;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.conteudo-principal.ciclo-do-oleo .reciclagem-caseira h1{
+    margin-bottom: 0;
 }
 
 .conteudo-principal.ciclo-do-oleo .reciclagem-caseira .receita{
-    margin: 0 auto;
-    padding: 0 15px 0 15px;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
