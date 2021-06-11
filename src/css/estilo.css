@@ -9,6 +9,7 @@ html, body{
     /*font-family: Arial, Helvetica, sans-serif;*/
     scroll-behavior: smooth;
 }
+
 /*? Div-Info */
 #info{
     background-color: #185510;
@@ -26,6 +27,7 @@ html, body{
     font-weight: bold;
     font-size: 12pt;
 }
+
 /*? Menu */
 .menu-header{
     display: block;
@@ -133,8 +135,8 @@ html, body{
     margin-right: 10px;
 }
 
-.conteudo-principal.inicio .parcerias h1::before, .conteudo-principal.ciclo-do-oleo .reciclagem-caseira h1::before
-, .conteudo-principal.contato h1::before{
+.conteudo-principal.inicio .parcerias h1::before, .conteudo-principal.ciclo-do-oleo .reciclagem-caseira h1::before,
+.conteudo-principal.contato h1::before{
     content: "";
     border-left: 7px solid #D9B855;
     margin-right: 10px;
@@ -173,7 +175,6 @@ html, body{
     padding: 100px;
 }
 
-
 .projeto .teste-img{
     display: flex;
     justify-content: center;
@@ -205,6 +206,7 @@ html, body{
 }
 
 /*? Conteúdo Inicial - Seção de Benefícios */
+
 
 /*? Conteúdo Inicial - Seção de Equipe */
 .equipe .card-container{
@@ -271,12 +273,36 @@ figure.fatec-osasco img, figure.cps img{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    text-align: center;
     list-style: none;
     font-size: 1.3rem;
 }
 
+.conteudo-principal.ciclo-do-oleo .produtos-reciclagem .card-container-produtos .card-produtos{
+    padding: 5px 50px;
+    border-radius: 15px;
+}
+
+.conteudo-principal.ciclo-do-oleo .produtos-reciclagem .card-container-produtos .card-produtos img{
+    width: 120px;
+    height: 75px;
+}
+
+.conteudo-principal.ciclo-do-oleo .produtos-reciclagem .card-container-produtos .card-produtos.biodiesel{
+    background-color: #185510;
+}
+
+.conteudo-principal.ciclo-do-oleo .produtos-reciclagem .card-container-produtos .titulo,
+.conteudo-principal.ciclo-do-oleo .produtos-reciclagem .card-container-produtos li{
+    color: white;
+    text-shadow: 0 1px 2px black;
+}
+
 .conteudo-principal.ciclo-do-oleo .produtos-reciclagem .card-container-produtos ul{
+    display: block;
     list-style: none;
+    font-size: 1.2rem;
+    padding: 0;
 }
 
 .conteudo-principal.ciclo-do-oleo .reciclagem-caseira .receita{
@@ -288,8 +314,8 @@ figure.fatec-osasco img, figure.cps img{
     font-size: 1.3rem;
 }
 
-
 /*? Conteúdo Pontos de Coleta */
+
 
 /*? Conteúdo Contato */
 .container-contato{
@@ -403,6 +429,7 @@ figure.fatec-osasco img, figure.cps img{
     border-radius: 5px;
     padding-left: 15px;
 }
+
 /*? Footer */
 footer{
     display: flex;
