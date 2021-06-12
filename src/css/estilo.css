@@ -166,6 +166,19 @@ html, body{
     color: #D9B855;
 }
 
+.conteudo-principal.inicio .beneficios .creditos p, 
+.conteudo-principal.ciclo-do-oleo .produtos-reciclagem .creditos p{
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.conteudo-principal.inicio .beneficios .creditos p a, 
+.conteudo-principal.ciclo-do-oleo .produtos-reciclagem .creditos p a{
+    color: #D9B855;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 /*? Conteúdo Inicial - Seção de Projeto */
 .inicio .slide-show{
     display: flex;
@@ -179,34 +192,61 @@ html, body{
     display: flex;
     justify-content: center;
     color: white;
-    background-color: #41901C;
-    padding: 100px;
-}
-
-.beneficios .teste{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.agua{
-    background-color: blue;
-    padding: 100px;
-    color: white;
-}
-
-.arvore{
-    background-color: red;
-    padding: 100px;
-}
-
-.trabalho{
-    background-color: green;
+    background-color: #636363;
     padding: 100px;
 }
 
 /*? Conteúdo Inicial - Seção de Benefícios */
+.conteudo-principal.inicio .beneficios .card-container-beneficios{
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    justify-content: space-between;
+    row-gap: 35px;
+    border: 1px solid #000;
+}
 
+.conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+.conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios:hover{
+    transform: scale(1.1);
+    transition: .8s;
+}
+
+.conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios img{
+    margin-top: 10px;
+    align-self: center;
+    width: 120px;
+    height: 75px;
+}
+
+.conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios.renda{
+    background-color: #185510;
+}
+
+.conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios .titulo{
+    font-size: 1.3rem;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #87D936;
+    border-width: 3px 0;
+    margin-bottom: 0;
+    padding: 5px 0;
+    background-color: #87D936;
+}
+
+.conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios .conteudo{
+    margin-top: 0;
+    padding: 5px;
+    background-color: #41901C;
+    color: #fff;
+    font-size: 1.1rem;
+}
 
 /*? Conteúdo Inicial - Seção de Equipe */
 .equipe .card-container{
@@ -285,7 +325,7 @@ figure.fatec-osasco img, figure.cps img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 50px;
+    padding: 15px 50px 0 50px;
     border-radius: 15px;
 }
 
@@ -317,7 +357,7 @@ figure.fatec-osasco img, figure.cps img{
 }
 
 .conteudo-principal.ciclo-do-oleo .produtos-reciclagem .card-container-produtos .card-produtos.massa{
-    background-color: #185510;
+    background-color: #41901C;
 }
 
 .conteudo-principal.ciclo-do-oleo .produtos-reciclagem .card-container-produtos .card-produtos.racao{
@@ -326,17 +366,6 @@ figure.fatec-osasco img, figure.cps img{
 
 .conteudo-principal.ciclo-do-oleo .produtos-reciclagem .card-container-produtos .titulo{
     color: white;
-}
-
-.conteudo-principal.ciclo-do-oleo .produtos-reciclagem .creditos p{
-    font-size: 1.1rem;
-    color: #ccc;
-}
-
-.conteudo-principal.ciclo-do-oleo .produtos-reciclagem .creditos p a{
-    color: #D9B855;
-    text-decoration: none;
-    font-weight: bold;
 }
 
 .conteudo-principal.ciclo-do-oleo .reciclagem-caseira h1{
