@@ -204,29 +204,6 @@ html, body{
     align-self: center;
 }
 
-.conteudo-principal.inicio .projeto .boas-vindas .msg-boas-vindas{
-    font-size: 2rem;
-    text-shadow: 1px 0 2px black;
-    color: #41901C;
-    text-align: center;
-}
-
-.conteudo-principal.inicio .projeto .boas-vindas .msg-boas-vindas::after{
-    content: "|";
-    opacity: 1;
-    display: inline-block;
-    animation: pisca .8s infinite;
-}
-
-@keyframes pisca {
-    0%, 100%{
-        opacity: 1;
-    }
-    50%{
-        opacity: 0;
-    }
-}
-
 .conteudo-principal.inicio .projeto .conteudo-info{
     padding-bottom: 20px;
     display: flex;
@@ -236,7 +213,7 @@ html, body{
 
 .conteudo-principal.inicio .projeto .conteudo-info p{
     line-height: 1.7rem;
-    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .conteudo-principal.inicio .projeto .conteudo-info .citacao{
@@ -257,16 +234,18 @@ html, body{
 
 .conteudo-principal.inicio .projeto .conteudo-info .citacao .objetivo, 
 .conteudo-principal.inicio .projeto .conteudo-info .citacao .artigos{
-    padding: 0 15px;
+    padding: 0 15px 15px 15px;
 }
 
 .conteudo-principal.inicio .projeto .conteudo-info .citacao .objetivo{
     font-size: 1.7rem;
     color: #a78c3b;
+    margin-bottom: 0;
 }
 
 .conteudo-principal.inicio .projeto .conteudo-info .citacao .artigos{
     font-size: 1.2rem;
+    margin-top: 0;
 }
 
 .conteudo-principal.inicio .projeto .conteudo-info .citacao .artigos .artigo{
@@ -464,8 +443,64 @@ figure.fatec-osasco img, figure.cps img{
 }
 
 /*? Conteúdo Ciclo do Óleo */
-.conteudo-principal.ciclo-do-oleo .descarte-oleo h1{
+.conteudo-principal.ciclo-do-oleo .ciclo-oleo{
+    padding-bottom: 5px;
+}
+
+.conteudo-principal.ciclo-do-oleo .ciclo-oleo p{
+    font-size: 1.3rem;
+}
+
+.conteudo-principal.inicio .projeto h1,
+.conteudo-principal.ciclo-do-oleo .ciclo-oleo h1,
+.conteudo-principal.ciclo-do-oleo .descarte-oleo h1,
+.conteudo-principal.ciclo-do-oleo .reciclagem-caseira h1{
     margin-bottom: 0;
+}
+
+.conteudo-principal.ciclo-do-oleo .ciclo-oleo .ciclo-oleo-conteudo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.conteudo-principal.ciclo-do-oleo .ciclo-oleo .ciclo-oleo-conteudo h2{
+    margin: 0;
+    font-size: 1.6rem;
+    padding: 8px;
+    color: #fff;
+}
+
+.conteudo-principal.ciclo-do-oleo .ciclo-oleo .ciclo-oleo-conteudo h3{
+    font-size: 1.4rem;
+}
+
+.conteudo-principal.ciclo-do-oleo .ciclo-oleo .ciclo-oleo-conteudo .titulo-ambientais{
+    background-color: #87D936;
+}
+
+.conteudo-principal.ciclo-do-oleo .ciclo-oleo .ciclo-oleo-conteudo .titulo-sociais{
+    background-color: #D9B855;
+}
+
+.conteudo-principal.ciclo-do-oleo .ciclo-oleo .ciclo-oleo-conteudo .agua{
+    color: #407093;
+}
+
+.conteudo-principal.ciclo-do-oleo .ciclo-oleo .ciclo-oleo-conteudo .solo{
+    color: #664545;
+}
+
+.conteudo-principal.ciclo-do-oleo .ciclo-oleo .ciclo-oleo-conteudo .atmosfera{
+    color: #b63d45;
+}
+
+.conteudo-principal.ciclo-do-oleo .ciclo-oleo .ciclo-oleo-conteudo .intro-impactos-ambientais{
+    padding: 0;
+}
+
+.conteudo-principal.ciclo-do-oleo .ciclo-oleo .ciclo-oleo-conteudo p{
+    padding: 0 20px 0 0;
 }
 
 .conteudo-principal.ciclo-do-oleo .descarte-oleo .passos-descarte{
@@ -544,10 +579,6 @@ figure.fatec-osasco img, figure.cps img{
     color: white;
 }
 
-.conteudo-principal.ciclo-do-oleo .reciclagem-caseira h1{
-    margin-bottom: 0;
-}
-
 .conteudo-principal.ciclo-do-oleo .reciclagem-caseira p{
     font-size: 1.3rem;
 }
@@ -565,8 +596,15 @@ figure.fatec-osasco img, figure.cps img{
     align-self: center;
 }
 
-.conteudo-principal.ciclo-do-oleo .reciclagem-caseira .receita .lista-materiais{
-    margin-top: 0;
+.conteudo-principal.ciclo-do-oleo .reciclagem-caseira .receita h2{
+    color: #41901C;
+}
+
+.conteudo-principal.ciclo-do-oleo .reciclagem-caseira .receita .lista-materiais,
+.conteudo-principal.ciclo-do-oleo .reciclagem-caseira .receita .modo-preparo{
+    margin: 0;
+    padding-right: 50px;
+    line-height: 1.7rem;
 }
 
 /*? Conteúdo Pontos de Coleta */
@@ -623,7 +661,7 @@ figure.fatec-osasco img, figure.cps img{
 }
 
 /*? Conteúdo Contato */
-.container-contato{
+.conteudo-principal.contato .container-contato{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -631,35 +669,38 @@ figure.fatec-osasco img, figure.cps img{
     flex-wrap: wrap;
 }
 
-.container-contato hr{
+.conteudo-principal.contato .container-contato hr{
     height: 50vh;
     border: 1px solid #F2E7AE;
 }
 
-.container-contato .msg-contato, .container-contato .form-contato{
+.conteudo-principal.contato .container-contato .msg-contato, 
+.conteudo-principal.contato .container-contato .form-contato{
     margin: 0 auto;
     font-size: 1.3rem;
 }
 
-.container-contato .msg-contato{
+.conteudo-principal.contato .container-contato .msg-contato{
     max-width: 400px;
 }
 
-.container-contato .msg-contato b{
+.conteudo-principal.contato .container-contato .msg-contato b{
     color: #D9B855;
     text-shadow: 1px 0 1px;
 } 
 
-.container-contato .form-contato{
+.conteudo-principal.contato .container-contato .form-contato{
     line-height: 45px;
     top: -5px;
 }
 
-.form-contato label{
+.conteudo-principal.contato .form-contato label{
     margin: 0;
 }
 
-.form-contato input[type="text"], .form-contato input[type="email"], .form-contato textarea{
+.conteudo-principal.contato .form-contato input[type="text"], 
+.conteudo-principal.contato .form-contato input[type="email"], 
+.conteudo-principal.contato .form-contato textarea{
     border-radius: 5px;
     border: 2px solid #D9B855;
     padding: 10px 10px 10px;
@@ -668,14 +709,16 @@ figure.fatec-osasco img, figure.cps img{
     font-weight: bold;
 }
 
-.form-contato input[type="text"]::placeholder, .form-contato input[type="email"]::placeholder, .form-contato textarea{
+.conteudo-principal.contato .form-contato input[type="text"]::placeholder, 
+.conteudo-principal.contato .form-contato input[type="email"]::placeholder, 
+.conteudo-principal.contato .form-contato textarea{
     font-weight: bold;
     margin: 0;
     font-size: 1.1rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.form-contato .btn-form{
+.conteudo-principal.contato .form-contato .btn-form{
     margin-top: 25px;   
     background-color: #185510;
     color: white;
@@ -687,19 +730,19 @@ figure.fatec-osasco img, figure.cps img{
     cursor: pointer;
 }
 
-.form-contato .btn-form.limpar{
+.conteudo-principal.contato .form-contato .btn-form.limpar{
     margin-left: 15px;
     background-color: #fff;
     color: #185510;
 }
 
-.form-contato .btn-form:hover{
+.conteudo-principal.contato .form-contato .btn-form:hover{
     color: #185510;
     background-color: #fff;
     transition: all ease-in-out .8s;
 }
 
-.form-contato .btn-form.limpar:hover{
+.conteudo-principal.contato .form-contato .btn-form.limpar:hover{
     color: #fff;
     background-color: #185510;
     transition: all ease-in-out .8s;

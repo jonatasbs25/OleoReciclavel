@@ -41,18 +41,6 @@ function exibirBotao() {
 }
 window.addEventListener("scroll", exibirBotao);
 
-//? slide-show
-function maquinaEscrever(elemento){
-    const textoArray = elemento.innerHTML.split("");
-    elemento.innerHTML = "";
-    textoArray.forEach((letra, i) => {
-        setTimeout(() => elemento.innerHTML += letra, 75 * i);
-    });
-}
-
-const msgBoasVindas = document.querySelector(".msg-boas-vindas");
-maquinaEscrever(msgBoasVindas);
-
 //? mensagem de erro formulário de contato
 const btnForm = document.querySelector(".btn-form");
 btnForm.addEventListener("click", exibirMensagem);
@@ -76,53 +64,3 @@ function exibirMensagem() {
         msgProcessForm.innerHTML = 'Mensagem enviada com sucesso.';
     }
 }
-
-//? exibir pontos de coletas
-const divPontosColeta = document.querySelector("#pontos-coleta");
-const btnPesquisar = document.querySelector(".btn-filtro");
-btnPesquisar.addEventListener("click", exibirTodos);
-
-let pontosColeta = [
-    {
-        endereco: "AVENIDA MARECHAL RONDON, 1215 - CENTRO - OSASCO - SP CEP: 06093-015",
-        bairro: "CENTRO",
-        cep: "06093-015",
-        tipoEmpresa: "EMPRESA",
-        estabelecimento: "BELGO BEKAERT ARAMES LTDA",
-    },
-    {
-        endereco: "AVENIDA MARECHAL RONDON, 1215",
-        bairro: "PARQUE IMPERIAL",
-        cep: "06083-015",
-        tipoEmpresa: "MERCADO",
-        estabelecimento: "BELGO BEKAERT ARAMES LTDA",
-    },
-];
-
-function exibirTodos(pontosColeta){
-    for(let i = 0; i <= pontosColeta.length; i++){
-        for (let valores of pontosColeta){
-            divPontosColeta.innerHTML += [
-                `<div class="pontos-coleta">`,
-                    `<p class="endereco"><i class="fa fa-map-marker"></i> ${valores.endereco}</p>`,
-                    `<p class="bairro">Bairro: ${valores.bairro}</p>`,
-                    `<p class="cep">CEP: ${valores.cep}</p>`,
-                    `<p class="tipo-estabelecimento">Tipo: ${valores.tipoEmpresa}</p>`,
-                    `<p class="estabelecimento">Empresa: ${valores.estabelecimento}</p>`,
-                `</div>`
-            ].join("\n");
-        }
-    }
-}
-
-function mostrarPorBairro(bairro) {
-	for (const valores of pontosColeta){
-        
-    }
-}
-
-/*function mostrarPorCep() {
-}
-
-function pesquisarEndereco() {
-}*/
