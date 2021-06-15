@@ -613,6 +613,7 @@ figure.fatec-osasco img, figure.cps img{
 }
 
 .conteudo-principal.inicio .projeto .conteudo-info a,
+.conteudo-principal.ciclo-do-oleo .reciclagem-caseira a,
 .conteudo-principal.pontos-coleta .painel-pontos-coleta .info a{
     text-decoration: none;
     color: #D9B855;
@@ -620,6 +621,7 @@ figure.fatec-osasco img, figure.cps img{
 }
 
 .conteudo-principal.inicio .projeto .conteudo-info a:hover,
+.conteudo-principal.ciclo-do-oleo .reciclagem-caseira a:hover,
 .conteudo-principal.pontos-coleta .painel-pontos-coleta .info a:hover{
     color: #a78c3b;
 }
