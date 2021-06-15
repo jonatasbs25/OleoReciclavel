@@ -168,13 +168,13 @@ html, body{
     color: #D9B855;
 }
 
+.conteudo-principal.inicio .projeto .conteudo-info .fonte-referencia,
 .conteudo-principal.inicio .beneficios .creditos p,
 .conteudo-principal.inicio .parcerias .link, 
 .conteudo-principal.ciclo-do-oleo .produtos-reciclagem .creditos p,
 .conteudo-principal.ciclo-do-oleo .descarte-oleo .creditos, 
 .conteudo-principal.ciclo-do-oleo .descarte-oleo .creditos a{
     font-size: 1rem;
-    font-style: italic;
     color: #ccc;
     text-decoration: none;
 }
@@ -191,20 +191,86 @@ html, body{
     font-size: 1.3rem;
 }
 
-.inicio .slide-show{
+.conteudo-principal.inicio .projeto .boas-vindas{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    color: white;
-    background-color: #41901C;
-    padding: 100px;
+    padding: 0 80px;
 }
 
-.projeto .teste-img{
+.conteudo-principal.inicio .projeto .boas-vindas img{
+    max-width: 260px;
+    max-height: 180px;
+    align-self: center;
+}
+
+.conteudo-principal.inicio .projeto .boas-vindas .msg-boas-vindas{
+    font-size: 2rem;
+    text-shadow: 1px 0 2px black;
+    color: #41901C;
+    text-align: center;
+}
+
+.conteudo-principal.inicio .projeto .boas-vindas .msg-boas-vindas::after{
+    content: "|";
+    opacity: 1;
+    display: inline-block;
+    animation: pisca .8s infinite;
+}
+
+@keyframes pisca {
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
+.conteudo-principal.inicio .projeto .conteudo-info{
+    padding-bottom: 20px;
     display: flex;
-    justify-content: center;
-    color: white;
-    background-color: #636363;
-    padding: 100px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.conteudo-principal.inicio .projeto .conteudo-info p{
+    line-height: 1.7rem;
+    margin-top: 0;
+}
+
+.conteudo-principal.inicio .projeto .conteudo-info .citacao{
+    max-width: 800px;
+    border: 2px solid #D9B855;
+    border-radius: 20px;
+    align-self: center;
+}
+
+.conteudo-principal.inicio .projeto .conteudo-info .citacao .titulo-ods{
+    background-color: #D9B855;
+    margin-top: 0;
+    padding: 5px 0;
+    text-align: center;
+    border-radius: 15px 15px 0 0;
+    color: #fff;
+}
+
+.conteudo-principal.inicio .projeto .conteudo-info .citacao .objetivo, 
+.conteudo-principal.inicio .projeto .conteudo-info .citacao .artigos{
+    padding: 0 15px;
+}
+
+.conteudo-principal.inicio .projeto .conteudo-info .citacao .objetivo{
+    font-size: 1.7rem;
+    color: #a78c3b;
+}
+
+.conteudo-principal.inicio .projeto .conteudo-info .citacao .artigos{
+    font-size: 1.2rem;
+}
+
+.conteudo-principal.inicio .projeto .conteudo-info .citacao .artigos .artigo{
+    color: #D9B855;
 }
 
 /*? Conteúdo Inicial - Seção de Benefícios */
@@ -217,11 +283,12 @@ html, body{
 
 .conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
     border-radius: 15px;
     box-shadow: 1px 5px 5px gray;
+    padding: 20px 0;
 }
 
 .conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios:hover{
@@ -268,9 +335,9 @@ html, body{
     background-color: #785252;
 }
 
-.conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios.solo .conteudo{
+/*.conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios.solo .conteudo{
     background-color: #664545;
-}
+}*/
 
 /*? Card Água */
 .conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios.agua{
@@ -282,9 +349,9 @@ html, body{
     border-color: #9DC6FB;
 }
 
-.conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios.agua .conteudo{
+/*.conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios.agua .conteudo{
     background-color: #7aacf1;
-}
+}*/
 
 /*? Card Atmosfera */
 .conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios.atmosfera{
@@ -296,9 +363,9 @@ html, body{
     border-color: #DD636E;
 }
 
-.conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios.atmosfera .conteudo{
+/*.conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios.atmosfera .conteudo{
     background-color: #DA4A54;
-}
+}*/
 
 /*? Card Renda */
 .conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios.renda{
@@ -310,9 +377,9 @@ html, body{
     border-color: #87D936;
 }
 
-.conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios.renda .conteudo{
+/*.conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios.renda .conteudo{
     background-color: #41901C;
-}
+}*/
 
 /*? Card Animais Aquáticos */
 .conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios.animais-aquaticos{
@@ -324,9 +391,9 @@ html, body{
     border-color: #64e9fd;
 }
 
-.conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios.animais-aquaticos .conteudo{
+/*.conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios.animais-aquaticos .conteudo{
     background-color: #3ec2ff;
-}
+}*/
 
 /*? Card Produtos Químicos */
 .conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios.produtos-quimicos{
@@ -338,9 +405,9 @@ html, body{
     border-color: #ffd968;
 }
 
-.conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios.produtos-quimicos .conteudo{
+/*.conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios.produtos-quimicos .conteudo{
     background-color: #FFC14F;
-}
+}*/
 
 /*? Conteúdo Inicial - Seção de Equipe */
 .conteudo-principal.inicio .equipe .card-container{
@@ -498,17 +565,23 @@ figure.fatec-osasco img, figure.cps img{
     align-self: center;
 }
 
+.conteudo-principal.ciclo-do-oleo .reciclagem-caseira .receita .lista-materiais{
+    margin-top: 0;
+}
+
 /*? Conteúdo Pontos de Coleta */
 .conteudo-principal.pontos-coleta .painel-pontos-coleta .info{
     font-size: 1.3rem;
 }
 
+.conteudo-principal.inicio .projeto .conteudo-info a,
 .conteudo-principal.pontos-coleta .painel-pontos-coleta .info a{
     text-decoration: none;
     color: #D9B855;
     transition: .8s;
 }
 
+.conteudo-principal.inicio .projeto .conteudo-info a:hover,
 .conteudo-principal.pontos-coleta .painel-pontos-coleta .info a:hover{
     color: #a78c3b;
 }
@@ -519,7 +592,6 @@ figure.fatec-osasco img, figure.cps img{
     color: #fff;
     padding: 5px 10px;
     text-shadow: 1px 1px 2px black;
-    border-radius: 5px 5px 0 0;
 }
 
 .conteudo-principal.pontos-coleta .painel-pontos-coleta .pontos-coleta{
@@ -531,22 +603,25 @@ figure.fatec-osasco img, figure.cps img{
 }
 
 .conteudo-principal.pontos-coleta .painel-pontos-coleta .pontos-coleta .local{
-    max-width: 400px;
-    border: 2px solid black;
-    border-radius: 15px;
+    max-width: 500px;
+    border: 2px solid #41901C;
+    border-radius: 20px;
 }
 
 .conteudo-principal.pontos-coleta .painel-pontos-coleta .pontos-coleta .local .endereco{
     margin: 0;
     background-color: #41901C;
-    padding: 5px 15px;
+    padding: 10px 15px;
     color: #fff;
     border-radius: 15px 15px 0 0;
 }
 
 .conteudo-principal.pontos-coleta .painel-pontos-coleta .pontos-coleta .local .info-local{
+    font-size: 1.2rem;
+    color: #41901C;
     padding: 0 15px 0 15px;
 }
+
 /*? Conteúdo Contato */
 .container-contato{
     display: flex;

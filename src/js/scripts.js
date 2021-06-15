@@ -42,7 +42,16 @@ function exibirBotao() {
 window.addEventListener("scroll", exibirBotao);
 
 //? slide-show
+function maquinaEscrever(elemento){
+    const textoArray = elemento.innerHTML.split("");
+    elemento.innerHTML = "";
+    textoArray.forEach((letra, i) => {
+        setTimeout(() => elemento.innerHTML += letra, 75 * i);
+    });
+}
 
+const msgBoasVindas = document.querySelector(".msg-boas-vindas");
+maquinaEscrever(msgBoasVindas);
 
 //? mensagem de erro formulário de contato
 const btnForm = document.querySelector(".btn-form");
