@@ -221,6 +221,7 @@ html, body{
     flex-wrap: wrap;
     flex-direction: column;
     border-radius: 15px;
+    box-shadow: 1px 5px 5px gray;
 }
 
 .conteudo-principal.inicio .beneficios .card-container-beneficios .card-beneficios:hover{
@@ -345,25 +346,29 @@ html, body{
 .conteudo-principal.inicio .equipe .card-container{
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 25px;
+    justify-content: center;
+    padding-bottom: 20px;
 }
 
 .conteudo-principal.inicio .equipe .card-participante{
     margin: 0;
     max-width: 500px;
     text-align: center;
-    font-size: 1.2rem;
     color: #a78c3b;
-    font-weight: bold;
-    background-color: #F2E7AE;
-    text-shadow: 0 1px 1.5px;
+    font-weight: bold;    
     border-radius: 15px;
+    padding: 0 20px;
 }
 
 .conteudo-principal.inicio .equipe .card-participante img{
-    width: 150px;
-    border-radius: 15px 15px 0 0;
-    height: 80px;
+    width: 180px;
+    border-radius: 100px;
+    height: 180px;
+    box-shadow: 1px 5px 5px gray;
+}
+
+.conteudo-principal.inicio .equipe .card-participante .container-content p{
+    font-size: 1.4rem;
 }
 
 /*? Conteúdo Inicial - Seção de Parcerias */
@@ -430,6 +435,7 @@ figure.fatec-osasco img, figure.cps img{
     align-items: center;
     padding: 15px 50px 0 50px;
     border-radius: 15px;
+    box-shadow: 1px 5px 5px gray;
 }
 
 .conteudo-principal.ciclo-do-oleo .produtos-reciclagem .card-container-produtos .card-produtos:hover{
@@ -520,8 +526,8 @@ figure.fatec-osasco img, figure.cps img{
     padding: 0 20px;
     display: grid;
     grid-template-columns: repeat(2, 400px);
-    gap: 30px;
-    justify-content: center;
+    row-gap: 30px;
+    justify-content: space-evenly;
 }
 
 .conteudo-principal.pontos-coleta .painel-pontos-coleta .pontos-coleta .local{
