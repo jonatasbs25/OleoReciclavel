@@ -663,7 +663,7 @@ figure.fatec-osasco img, figure.cps img{
 }
 
 /*? Conteúdo Contato */
-.conteudo-principal.contato .container-contato{
+.conteudo-principal.contato .contato .container-contato{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -676,51 +676,51 @@ figure.fatec-osasco img, figure.cps img{
     border: 1px solid #F2E7AE;
 }
 
-.conteudo-principal.contato .container-contato .msg-contato, 
-.conteudo-principal.contato .container-contato .form-contato{
+.conteudo-principal.contato .contato .container-contato .msg-contato, 
+.conteudo-principal.contato .contato .container-contato .form-contato{
     margin: 0 auto;
     font-size: 1.3rem;
 }
 
-.conteudo-principal.contato .container-contato .msg-contato{
+.conteudo-principal.contato .contato .container-contato .msg-contato{
     max-width: 400px;
 }
 
-.conteudo-principal.contato .container-contato .msg-contato b{
+.conteudo-principal.contato .contato .container-contato .msg-contato b{
     color: #D9B855;
-    text-shadow: 1px 0 1px;
 } 
 
-.conteudo-principal.contato .container-contato .form-contato{
+.conteudo-principal.contato .contato .container-contato .form-contato{
     line-height: 45px;
     top: -5px;
 }
 
-.conteudo-principal.contato .form-contato label{
+.conteudo-principal.contato .contato .container-contato .form-contato label{
     margin: 0;
 }
 
-.conteudo-principal.contato .form-contato input[type="text"], 
-.conteudo-principal.contato .form-contato input[type="email"], 
-.conteudo-principal.contato .form-contato textarea{
+.conteudo-principal.contato .contato .container-contato .form-contato input[type="text"], 
+.conteudo-principal.contato .contato .container-contato .form-contato input[type="email"], 
+.conteudo-principal.contato .contato .container-contato .form-contato textarea{
     border-radius: 5px;
-    border: 2px solid #D9B855;
+    border: 2px solid;
+    border-color: #D9B855;
     padding: 10px 10px 10px;
     width: 480px;
     font-size: 1.2rem;
     font-weight: bold;
 }
 
-.conteudo-principal.contato .form-contato input[type="text"]::placeholder, 
-.conteudo-principal.contato .form-contato input[type="email"]::placeholder, 
-.conteudo-principal.contato .form-contato textarea{
+.conteudo-principal.contato .contato .container-contato .form-contato input[type="text"]::placeholder, 
+.conteudo-principal.contato .contato .container-contato .form-contato input[type="email"]::placeholder, 
+.conteudo-principal.contato .contato .container-contato .form-contato textarea{
     font-weight: bold;
     margin: 0;
     font-size: 1.1rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.conteudo-principal.contato .form-contato .btn-form{
+.conteudo-principal.contato .contato .container-contato .form-contato .btn-form{
     margin-top: 25px;   
     background-color: #185510;
     color: white;
@@ -732,39 +732,53 @@ figure.fatec-osasco img, figure.cps img{
     cursor: pointer;
 }
 
-.conteudo-principal.contato .form-contato .btn-form.limpar{
+.conteudo-principal.contato .contato .container-contato .form-contato .btn-form.limpar{
     margin-left: 15px;
     background-color: #fff;
     color: #185510;
 }
 
-.conteudo-principal.contato .form-contato .btn-form:hover{
+.conteudo-principal.contato .contato .container-contato .form-contato .btn-form:hover{
     color: #185510;
     background-color: #fff;
     transition: all ease-in-out .8s;
 }
 
-.conteudo-principal.contato .form-contato .btn-form.limpar:hover{
+.conteudo-principal.contato .contato .container-contato .form-contato .btn-form.limpar:hover{
     color: #fff;
     background-color: #185510;
     transition: all ease-in-out .8s;
 }
 
-.msg-erro{
-    margin: 0 auto; 
-    display: none;
+.conteudo-principal.contato .contato .container-contato .form-contato label.erro{
     color: rgb(206, 33, 33);
 }
 
-/*#msg-process-form{
-    display: none;
-    color: #fff;
-    background-color: #099b4b;
-    border-radius: 5px;
-    padding-left: 15px;
-}*/
+.conteudo-principal.contato .contato .container-contato .form-contato input.erro,
+.conteudo-principal.contato .contato .container-contato .form-contato textarea.erro
+{
+    outline-color: rgb(206, 33, 33);
+    border: 2px solid rgb(206, 33, 33);
+}
 
-#msg-process-form{
+.conteudo-principal.contato .contato .container-contato .form-contato input.erro:focus,
+.conteudo-principal.contato .contato .container-contato .form-contato textarea.erro:focus{
+    outline-color: rgb(206, 33, 33);
+}
+
+.conteudo-principal.contato .contato .container-contato .form-contato input.sucess,
+.conteudo-principal.contato .contato .container-contato .form-contato textarea.sucess{
+    border: 2px solid #099b4b;
+}
+
+.conteudo-principal.contato .contato .container-contato .form-contato .msg-erro{
+    margin: 0;
+    display: none; 
+    color: rgb(206, 33, 33);
+    font-size: 1rem;
+}
+
+.conteudo-principal.contato .contato .container-contato .form-contato #msg-process-form{
     display: none;
     color: #fff;
     background-color: rgb(206, 33, 33);
@@ -772,7 +786,7 @@ figure.fatec-osasco img, figure.cps img{
     padding-left: 15px;
 }
 
-#msg-process-form.sucess{
+.conteudo-principal.contato .contato .container-contato .form-contato #msg-process-form.sucess{
     display: none;
     color: #fff;
     background-color: #099b4b;

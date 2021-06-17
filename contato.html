@@ -50,21 +50,17 @@
                 </p>
                 <hr>
                 <form action="https://formspree.io/f/xoqydonw" method="post" class="form-contato">
-                    <label for="nome" class="lb-nome" id="erro-nome">Nome Completo:</label><br>
+                    <label for="nome" id="label-nome">Nome Completo:</label><br>
                     <input type="text" name="Nome" id="nome" placeholder="Digite o seu nome completo" required><br>
-                    <p class="msg-erro nome"></p>
                     
-                    <label for="email" id="erro-email">E-mail:</label><br>
+                    <label for="email" id="label-email">E-mail:</label><br>
                     <input type="email" name="Email" id="email" placeholder="Digite o seu email" required><br>
-                    <p class="msg-erro email"></p>
     
-                    <label for="titulo" id="erro-nome">Título da Mensagem:</label><br>
+                    <label for="titulo" id="label-titulo">Título da Mensagem:</label><br>
                     <input type="text" name="Título" id="titulo" placeholder="Digite o título da mensagem/dúvida" required><br>
-                    <p class="msg-erro titulo"></p>
     
-                    <label for="email" id="erro-nome">Mensagem:</label><br>
+                    <label for="email" id="label-mensagem">Mensagem:</label><br>
                     <textarea name="Mensagem" id="mensagem" cols="30" rows="10" placeholder="Digite sua mensagem/dúvida nesse espaço" maxlength="500" required></textarea><br>
-                    <p class="msg-erro mensagem"></p>
     
                     <input type="submit" value="Enviar" class="btn-form enviar">
                     <input type="reset" value="Limpar" class="btn-form limpar"><br>
@@ -72,7 +68,6 @@
                     <p id="msg-process-form"></p>
                 </form>
             </div>
-            <div id="msg-form"></div>
         </section>
     </main>
     <span id="btn-topo">
