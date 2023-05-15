@@ -9,8 +9,8 @@
 Acesse o link: https://oleoreciclavel.netlify.app/.
 
 ### Autores
-Felipe Gomes dos Santos Areas
-Jônatas Borges de Souza
-Juan Ferreira Ribeiro
-Kauã Vanceto Motta
+Felipe Gomes dos Santos Areas<br>
+Jônatas Borges de Souza<br>
+Juan Ferreira Ribeiro<br>
+Kauã Vanceto Motta<br>
 Kauê Vinícius da Silva Lima
